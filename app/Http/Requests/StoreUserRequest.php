@@ -26,11 +26,7 @@ class StoreUserRequest extends FormRequest
             'username'=>['required','unique:users,username'],
             'email'=>['required','unique:users,email'],
             'password'=>['required','min:8'],
-            'address'=>['required'],
             'role_id'=>['required'],
-            'birthdate'=>['date'],
-            'phone'=>['required','unique:users,phone'],
-            'gender'=>['required'],
         ];
     }
 }

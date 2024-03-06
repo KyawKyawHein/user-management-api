@@ -27,11 +27,7 @@ class UpdateUserRequest extends FormRequest
             'username'=>['required',Rule::unique('users','username')->ignore($this->id)],
             'email'=>['required',Rule::unique('users','email')->ignore($this->id)],
             'password'=>['required','min:8'],
-            'address'=>['required'],
-            'role'=>['required'],
-            'birthdate'=>['date'],
-            'phone'=>['required'],
-            'gender'=>['required'],
+            'role_id'=>['required'],
         ];
     }
 }

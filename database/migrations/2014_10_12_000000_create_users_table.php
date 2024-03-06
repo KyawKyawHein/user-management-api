@@ -18,14 +18,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->text('address');
             $table->foreignId('role_id');
-            $table->date('birthdate')->nullable();
-            $table->enum('gender',['male','female']);
-            $table->string('phone')->unique();
-            $table->string('facebook_link')->nullable();
             $table->enum('isActive',['true','false'])->default('true');
-            $table->string('photo')->nullable(true);
             $table->rememberToken();
             $table->timestamps();
         });
